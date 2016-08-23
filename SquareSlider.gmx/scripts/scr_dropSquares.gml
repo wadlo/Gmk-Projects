@@ -12,11 +12,11 @@ if global.moveX = true {
 
 //fall!  ahhhh!
 if (global.moveY = false or column != global.mouseCol) {
-        repeat (fallSpeed)
+        repeat (ySpeed)
             if (instance_place(x, y + global.squareSpaceY + 1, obj_SquareStd) == noone and y < bottomRow) {
                 y+=1; }
             else
-                fallSpeed = 0; }  
+                ySpeed = 0; }  
                 
-//update fallSpeed
-fallSpeed +=1;
+//update ySpeed
+ySpeed +=global.gravity;

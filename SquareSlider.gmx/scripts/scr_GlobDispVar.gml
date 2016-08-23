@@ -53,5 +53,5 @@ global.squareHeight = global.squareHeight - global.squareSpaceY
     
 //Global Movement Variables
     //gravity
-    global.gravity = 20
+    global.gravity = 9.8
 

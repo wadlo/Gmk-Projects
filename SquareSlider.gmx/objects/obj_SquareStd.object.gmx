@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//some moving variables
-fallSpeed = 0;
+            <string>//moving variables
+ySpeed = 0;
 alignSquares = false
 initialX = 0
 initialY = 0
