@@ -25,14 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>color = make_colour_rgb(0, 0, 255);//innitialize base color
+            <string>//some moving variables
+fallSpeed = 0;
 alignSquares = false
+initialX = 0
+initialY = 0
 
-//Number of colors
+//Make a random color
+color = make_colour_rgb(0, 0, 255);//innitialize base color
 rand_num = irandom(global.numColors) 
-
-switch (rand_num) //Select color based of random result
-{
+switch (rand_num) { //Select color based of random result
     case 0:
         color = global.blue
         break;
@@ -50,16 +52,11 @@ switch (rand_num) //Select color based of random result
         break;
     case 5:
         color = global.purple
-        break;  
-}
-//used to move the block relative to the mouse
-initialX = 0
-initialY = 0
+        break;  }
+
 //default row and column
 row = 0
 column = 0
-//movement variables
-
 
 //sets the x and y scale for the image based off the selected number of rows and collumns
 image_xscale = global.squareWidth/sprite_width
@@ -88,16 +85,18 @@ image_yscale = global.squareHeight/sprite_height
             <kind>1</kind>
             <string>//move squares down if there is nothing below
 //if not bottom row
-if global.mouseIsPressed
-{
+if global.mouseIsPressed {
     scr_findRowAndColumn()
     scr_moveSquare()
-    scr_loopSquares()
-}else
-{
-    scr_dropSquares()
+    scr_loopSquares() }
+    
+//align when released
+if mouse_check_button_released(mb_left) {
+    scr_alignSquares();
 }
-scr_alignSquares()
+    
+//scr_alignSquares()
+depth = y;
 </string>
           </argument>
         </arguments>
@@ -191,7 +190,12 @@ show_debug_message(string(x) + " " + string(y))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite_ext(spr_squareStd, 0, x, y, image_xscale, image_yscale, 0, color, 255)
+            <string>//time to fall.
+if !(global.mouseIsPressed) {
+    scr_dropSquares() }
+
+//time to draw.    
+draw_sprite_ext(spr_squareStd, 0, x, y, image_xscale, image_yscale, 0, color, 255)
 </string>
           </argument>
         </arguments>
