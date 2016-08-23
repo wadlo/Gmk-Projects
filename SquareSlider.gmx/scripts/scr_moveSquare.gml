@@ -1,11 +1,10 @@
 //move the squares
-if global.mouseIsPressed = true
-{
-    if initialX = 0
+if global.mouseIsPressed = true {
+    if initialX = 0 
     {
         initialX = x - global.initMouseX//mouse_x
     }
-    if initialY = 0
+    if initialY = 0 
     {
         initialY = y - global.initMouseY//mouse_y
     }
