@@ -21,15 +21,17 @@
     <script>scripts\scr_loopSquares.gml</script>
     <script>scripts\scr_cntSqrInCol.gml</script>
     <script>scripts\scr_findRowInOrder.gml</script>
-    <script>scripts\scr_destroyHorizontally.gml</script>
     <script>scripts\scr_findColumnInOrder.gml</script>
+    <script>scripts\scr_destroyHorizontally.gml</script>
     <script>scripts\scr_destroyVertically.gml</script>
     <script>scripts\scr_dropSquares.gml</script>
   </scripts>
   <objects name="objects">
-    <object>objects\obj_SquareStd</object>
-    <object>objects\obj_Global</object>
-    <object>objects\obj_GridController</object>
+    <objects name="inGame">
+      <object>objects\obj_SquareStd</object>
+      <object>objects\obj_GridController</object>
+      <object>objects\obj_Global</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\playRoom</room>
