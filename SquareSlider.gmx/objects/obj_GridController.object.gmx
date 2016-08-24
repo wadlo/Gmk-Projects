@@ -58,8 +58,7 @@ for(i = global.missingRows; i &lt; global.rows; i +=1)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.mouseIsPressed = false
-{
+            <string>if (global.mouseIsPressed == false) {
     scr_destroyHorizontally()
     scr_destroyVertically()
 }

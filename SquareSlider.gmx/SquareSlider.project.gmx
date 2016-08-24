@@ -14,7 +14,6 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_GlobDispVar.gml</script>
-    <script>scripts\scr_findRowAndColumn.gml</script>
     <script>scripts\scr_moveSquare.gml</script>
     <script>scripts\scr_alignSquares.gml</script>
     <script>scripts\scr_setMouseRowColumn.gml</script>
@@ -25,6 +24,10 @@
     <script>scripts\scr_destroyHorizontally.gml</script>
     <script>scripts\scr_destroyVertically.gml</script>
     <script>scripts\scr_dropSquares.gml</script>
+    <script>scripts\scr_findRow.gml</script>
+    <script>scripts\scr_findColumn.gml</script>
+    <script>scripts\scr_findY.gml</script>
+    <script>scripts\scr_findX.gml</script>
   </scripts>
   <objects name="objects">
     <objects name="inGame">
@@ -32,6 +35,7 @@
       <object>objects\obj_GridController</object>
       <object>objects\obj_Global</object>
     </objects>
+    <object>objects\obj_WhiteSlider</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\playRoom</room>

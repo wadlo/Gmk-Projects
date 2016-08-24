@@ -83,10 +83,12 @@ image_yscale = global.squareHeight/sprite_height
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//move squares down if there is nothing below
-//if not bottom row
+            <string>//move squares if mouse is clicked.
 if global.mouseIsPressed {
-    scr_findRowAndColumn()
+
+//find row and column
+    row = scr_findRow(y);
+    column = scr_findColumn(x);
     scr_moveSquare()
     scr_loopSquares() }
     
@@ -119,7 +121,8 @@ depth = y;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.mouseIsPressed = false
+            <string>//reset lots of global variables
+global.mouseIsPressed = false
 global.initMouseX = -1
 global.initMouseY = -1
 global.moveX = false
@@ -151,21 +154,20 @@ alignSquares = true
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.mouseIsPressed = true
+            <string>global.mouseIsPressed = true;
 
-//sets the mouse row and column
-scr_setMouseRowColumn()
+//sets the mouse row and column to move
+if global.mouseRow = 0
+    global.mouseRow = scr_findRow(mouse_y);
+    show_debug_message(scr_findRow(mouse_y));
+if global.mouseCol = 0
+    global.mouseCol = scr_findColumn(mouse_x);
 
 //sets initial mouse position to the current mouse position
-if global.initMouseX = -1
-{
-    global.initMouseX = mouse_x
-}
-if global.initMouseY = -1
-{
-    global.initMouseY = mouse_y
-}
-show_debug_message(string(x) + " " + string(y))
+if (global.initMouseX == -1) {
+    global.initMouseX = mouse_x; }
+if (global.initMouseY == -1) {
+    global.initMouseY = mouse_y }
 
 
 </string>
