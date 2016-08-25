@@ -56,7 +56,10 @@
     <instance objName="&lt;undefined&gt;" x="176" y="352" name="inst_EA294936" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_exit" x="0" y="0" name="inst_41188A6C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_title" x="96" y="64" name="inst_8D9F5719" locked="0" code="" scaleX="1.6080402135849" scaleY="1.68421053886414" colour="4294967295" rotation="0"/>
-    <instance objName="obj_start" x="176" y="336" name="inst_4A3E9D9C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_start" x="176" y="368" name="inst_4A3E9D9C" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_settings" x="272" y="560" name="inst_2CD35A0B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_Leaderboard" x="208" y="560" name="inst_E9D1AE92" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_editColors" x="144" y="560" name="inst_9B4A1114" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

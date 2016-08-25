@@ -8,9 +8,11 @@
   <sprites name="sprites">
     <sprite>sprites\spr_squareStd</sprite>
     <sprite>sprites\spr_CMD</sprite>
-    <sprite>sprites\spr_logo</sprite>
     <sprites name="Menu">
       <sprite>sprites\spr_close</sprite>
+      <sprite>sprites\spr_settings</sprite>
+      <sprite>sprites\spr_editColors</sprite>
+      <sprite>sprites\spr_Leaderboard</sprite>
       <sprite>sprites\spr_start</sprite>
       <sprite>sprites\spr_Title</sprite>
     </sprites>
@@ -48,6 +50,9 @@
       <object>objects\obj_nextRoom</object>
       <object>objects\obj_start</object>
       <object>objects\obj_exit</object>
+      <object>objects\obj_settings</object>
+      <object>objects\obj_Leaderboard</object>
+      <object>objects\obj_editColors</object>
     </objects>
   </objects>
   <rooms name="rooms">
