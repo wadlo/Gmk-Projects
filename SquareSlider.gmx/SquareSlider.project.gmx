@@ -9,8 +9,15 @@
     <sprite>sprites\spr_squareStd</sprite>
     <sprite>sprites\spr_CMD</sprite>
     <sprite>sprites\spr_logo</sprite>
+    <sprites name="Menu">
+      <sprite>sprites\spr_close</sprite>
+      <sprite>sprites\spr_start</sprite>
+      <sprite>sprites\spr_Title</sprite>
+    </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bgr_logo</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_GlobDispVar.gml</script>
@@ -36,12 +43,18 @@
       <object>objects\obj_Global</object>
     </objects>
     <object>objects\obj_WhiteSlider</object>
+    <objects name="Menu">
+      <object>objects\obj_title</object>
+      <object>objects\obj_nextRoom</object>
+      <object>objects\obj_start</object>
+      <object>objects\obj_exit</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\playRoom</room>
     <room>rooms\Logo</room>
-    <room>rooms\Intro</room>
     <room>rooms\Menu</room>
+    <room>rooms\playRoom</room>
+    <room>rooms\Intro</room>
     <room>rooms\Settings</room>
     <room>rooms\room5</room>
   </rooms>
