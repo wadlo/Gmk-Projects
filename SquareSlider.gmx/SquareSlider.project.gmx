@@ -10,6 +10,7 @@
     <sprite>sprites\spr_CMD</sprite>
     <sprites name="Menu">
       <sprite>sprites\spr_close</sprite>
+      <sprite>sprites\spr_closeConfirm</sprite>
       <sprite>sprites\spr_settings</sprite>
       <sprite>sprites\spr_editColors</sprite>
       <sprite>sprites\spr_Leaderboard</sprite>
@@ -53,15 +54,19 @@
       <object>objects\obj_settings</object>
       <object>objects\obj_Leaderboard</object>
       <object>objects\obj_editColors</object>
+      <object>objects\obj_particleSystem</object>
+      <object>objects\obj_exitConfirm</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Logo</room>
     <room>rooms\Menu</room>
     <room>rooms\playRoom</room>
-    <room>rooms\Intro</room>
-    <room>rooms\Settings</room>
-    <room>rooms\room5</room>
+    <rooms name="MenuSystem">
+      <room>rooms\Intro</room>
+      <room>rooms\Settings</room>
+      <room>rooms\LevelSelect</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
