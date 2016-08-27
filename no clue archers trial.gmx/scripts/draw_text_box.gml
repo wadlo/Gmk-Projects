@@ -1,20 +1,14 @@
-var i,height=1,width=0;
-var count = 0;
+//draw_text_box(x,y,text)
+var w, h, padding;
+padding = 5;
+draw_set_font(normal);
+w = max(30,string_width(argument2));
+h = max(30,string_height(argument2));
+draw_set_color(c_white);
+draw_rectangle_rounded(argument0,argument1,
+    argument0+2*padding+w,argument1+2*padding+h);
+draw_set_color(c_black);    
+draw_text(argument0+padding,argument1+padding,argument2);
 
-for (i=0;i<string_length(argument2);i+=1) {
-    if (string_char_at(argument2,i+1) = '#') {
-        height+=1;
-        count = 0; }
-    else {
-        count+=1;
-        width = max(width,count); }}
-show_debug_message('width: '+string(width)+' height: ' + string(height));
-/**
-draw_rectangle(argument0+6,argument1,argument2-6,argument1+6,false);
-draw_rectangle(argument0,argument1+6,argument2-1,argument3-6,false);
-draw_rectangle(argument0+6,argument3-6,argument2-6,argument3-1,false);
-draw_sprite(corner,0,argument0,argument1);
-draw_sprite_ext(corner,0,argument0,argument3,1,-1,0,c_white,1);//90
-draw_sprite_ext(corner,0,argument2,argument1,-1,1,0,c_white,1);//270
-draw_sprite_ext(corner,0,argument2,argument3,-1,-1,0,c_white,1);//180
-*/
+
+

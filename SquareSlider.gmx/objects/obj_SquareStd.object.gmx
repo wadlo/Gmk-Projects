@@ -86,18 +86,17 @@ image_yscale = global.squareHeight/sprite_height
             <string>//move squares if mouse is clicked.
 if global.mouseIsPressed {
 
-//find row and column
-    row = scr_findRow(y);
-    column = scr_findColumn(x);
-    scr_moveSquare()
-    scr_loopSquares() }
+    //find row and column
+        row = scr_findRow(y);
+        column = scr_findColumn(x);
+        scr_moveSquare()
+        scr_loopSquares() }
+        
+    //align when released
+    if mouse_check_button_released(mb_left) {
+        scr_alignSquares(); }
     
-//align when released
-if mouse_check_button_released(mb_left) {
-    scr_alignSquares();
-}
-    
-//scr_alignSquares()
+//Make them fall together.
 depth = y;
 </string>
           </argument>

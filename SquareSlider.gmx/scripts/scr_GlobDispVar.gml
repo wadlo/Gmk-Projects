@@ -7,7 +7,7 @@ global.missingRows = 0 //4
 global.missingCols = 0 //0
 
 //Movement Speed;
-global.maxSpeed = 40   
+global.maxSpeed = 100   
 
 //Initialize the size of empty space around the block grid
 global.displayStartX = 30 //25

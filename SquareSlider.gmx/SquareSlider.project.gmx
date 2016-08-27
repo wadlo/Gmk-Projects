@@ -16,6 +16,8 @@
     <script>scripts\scr_GlobDispVar.gml</script>
     <script>scripts\scr_moveSquare.gml</script>
     <script>scripts\scr_alignSquares.gml</script>
+    <script>scripts\scr_alignY.gml</script>
+    <script>scripts\scr_alignX.gml</script>
     <script>scripts\scr_setMouseRowColumn.gml</script>
     <script>scripts\scr_loopSquares.gml</script>
     <script>scripts\scr_cntSqrInCol.gml</script>
@@ -32,10 +34,10 @@
   <objects name="objects">
     <objects name="inGame">
       <object>objects\obj_SquareStd</object>
+      <object>objects\obj_WhiteSlider</object>
       <object>objects\obj_GridController</object>
       <object>objects\obj_Global</object>
     </objects>
-    <object>objects\obj_WhiteSlider</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\playRoom</room>

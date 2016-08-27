@@ -1,19 +1,17 @@
 //move the squares
 if global.mouseIsPressed = true {
     if initialX = 0 {
-        initialX = x - global.initMouseX//mouse_x
-    }
+        initialX = x - global.initMouseX }
     if initialY = 0 {
-        initialY = y - global.initMouseY//mouse_y
-    }
+        initialY = y - global.initMouseY }
     
     //find what direction we're moving.
-    if (global.moveX = false and global.moveY = false) {
+    /**if (global.moveX = false and global.moveY = false) {
         if abs(mouse_x - global.initMouseX) > 10 or abs(mouse_y - global.initMouseY) > 10 {
             if abs(mouse_x - global.initMouseX) > abs(mouse_y - global.initMouseY) {
                 global.moveX = true }
             else {
-                global.moveY = true } } }
+                global.moveY = true } } } } */   
     
     //move in x direction
     if global.moveX == true{

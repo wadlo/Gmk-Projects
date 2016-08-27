@@ -95,6 +95,7 @@
     <sprite>sprites\roger_example</sprite>
     <sprite>sprites\corner</sprite>
     <sprite>sprites\fat_king</sprite>
+    <sprite>sprites\heads</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\grassy_bg</background>
@@ -197,6 +198,7 @@
       <object>objects\MenuController</object>
     </objects>
     <object>objects\roger</object>
+    <object>objects\dialogueBox</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\menu_room</room>
