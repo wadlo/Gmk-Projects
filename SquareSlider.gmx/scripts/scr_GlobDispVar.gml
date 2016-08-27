@@ -27,6 +27,7 @@ global.yellow = make_colour_rgb(204, 204, 0)
 global.red = make_colour_rgb(204, 0, 0)
 global.orange = make_colour_rgb(255, 102, 0)
 global.purple = make_colour_rgb(153, 0, 204)
+global.white = make_colour_rgb(255, 255, 255)
 
 //Initialize the size of area for blocks to display on screen 
 global.displayWidth = room_width - (global.displayStartX * 2) //same distance on each side

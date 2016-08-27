@@ -8,9 +8,19 @@
   <sprites name="sprites">
     <sprite>sprites\spr_squareStd</sprite>
     <sprite>sprites\spr_CMD</sprite>
-    <sprite>sprites\spr_logo</sprite>
+    <sprites name="Menu">
+      <sprite>sprites\spr_close</sprite>
+      <sprite>sprites\spr_closeConfirm</sprite>
+      <sprite>sprites\spr_settings</sprite>
+      <sprite>sprites\spr_editColors</sprite>
+      <sprite>sprites\spr_Leaderboard</sprite>
+      <sprite>sprites\spr_start</sprite>
+      <sprite>sprites\spr_Title</sprite>
+    </sprites>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bgr_logo</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_GlobDispVar.gml</script>
@@ -38,14 +48,27 @@
       <object>objects\obj_GridController</object>
       <object>objects\obj_Global</object>
     </objects>
+    <objects name="Menu">
+      <object>objects\obj_title</object>
+      <object>objects\obj_nextRoom</object>
+      <object>objects\obj_start</object>
+      <object>objects\obj_exit</object>
+      <object>objects\obj_settings</object>
+      <object>objects\obj_Leaderboard</object>
+      <object>objects\obj_editColors</object>
+      <object>objects\obj_particleSystem</object>
+      <object>objects\obj_exitConfirm</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\playRoom</room>
     <room>rooms\Logo</room>
-    <room>rooms\Intro</room>
     <room>rooms\Menu</room>
-    <room>rooms\Settings</room>
-    <room>rooms\room5</room>
+    <room>rooms\playRoom</room>
+    <rooms name="MenuSystem">
+      <room>rooms\Intro</room>
+      <room>rooms\Settings</room>
+      <room>rooms\LevelSelect</room>
+    </rooms>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
