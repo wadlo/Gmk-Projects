@@ -16,6 +16,15 @@
       <sprite>sprites\spr_Leaderboard</sprite>
       <sprite>sprites\spr_start</sprite>
       <sprite>sprites\spr_Title</sprite>
+      <sprites name="Settings">
+        <sprite>sprites\spr_settingsTitle</sprite>
+        <sprite>sprites\spr_resetText</sprite>
+        <sprite>sprites\spr_musicText</sprite>
+        <sprite>sprites\spr_sfxText</sprite>
+        <sprite>sprites\spr_SFX</sprite>
+        <sprite>sprites\spr_resetGame</sprite>
+        <sprite>sprites\spr_music</sprite>
+      </sprites>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -58,6 +67,16 @@
       <object>objects\obj_editColors</object>
       <object>objects\obj_particleSystem</object>
       <object>objects\obj_exitConfirm</object>
+      <objects name="Settings">
+        <object>objects\obj_settingsTitle</object>
+        <object>objects\obj_settingsBack</object>
+        <object>objects\obj_SFX</object>
+        <object>objects\obj_Music</object>
+        <object>objects\obj_reset</object>
+        <object>objects\obj_sfxText</object>
+        <object>objects\obj_musicText</object>
+        <object>objects\obj_resetText</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
