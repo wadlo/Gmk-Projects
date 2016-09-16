@@ -25,7 +25,11 @@
         <sprite>sprites\spr_resetGame</sprite>
         <sprite>sprites\spr_music</sprite>
       </sprites>
+      <sprites name="LevelSelect">
+        <sprite>sprites\spr_LevelOne</sprite>
+      </sprites>
     </sprites>
+    <sprite>sprites\spr_LogoAnimation</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bgr_logo</background>
@@ -58,18 +62,9 @@
       <object>objects\obj_Global</object>
     </objects>
     <objects name="Menu">
-      <object>objects\obj_title</object>
       <object>objects\obj_nextRoom</object>
-      <object>objects\obj_start</object>
-      <object>objects\obj_exit</object>
-      <object>objects\obj_settings</object>
-      <object>objects\obj_Leaderboard</object>
-      <object>objects\obj_editColors</object>
-      <object>objects\obj_particleSystem</object>
-      <object>objects\obj_exitConfirm</object>
       <objects name="Settings">
         <object>objects\obj_settingsTitle</object>
-        <object>objects\obj_settingsBack</object>
         <object>objects\obj_SFX</object>
         <object>objects\obj_Music</object>
         <object>objects\obj_reset</object>
@@ -77,16 +72,30 @@
         <object>objects\obj_musicText</object>
         <object>objects\obj_resetText</object>
       </objects>
+      <objects name="MainMenu">
+        <object>objects\obj_title</object>
+        <object>objects\obj_start</object>
+        <object>objects\obj_settings</object>
+        <object>objects\obj_Leaderboard</object>
+        <object>objects\obj_editColors</object>
+        <object>objects\obj_particleSystem</object>
+        <object>objects\obj_exitConfirm</object>
+        <object>objects\obj_exit</object>
+      </objects>
+      <object>objects\obj_settingsBack</object>
+      <objects name="LevelSelect">
+        <object>objects\obj_LevelOne</object>
+      </objects>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\Logo</room>
     <room>rooms\Menu</room>
-    <room>rooms\playRoom</room>
     <rooms name="MenuSystem">
       <room>rooms\Intro</room>
       <room>rooms\Settings</room>
       <room>rooms\LevelSelect</room>
+      <room>rooms\playRoom</room>
     </rooms>
   </rooms>
   <help>

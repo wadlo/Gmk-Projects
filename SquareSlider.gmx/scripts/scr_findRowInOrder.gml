@@ -1,3 +1,5 @@
+//Returns the a list of the x values of the squares in the given row. Returns -1 if the square position is empty
+
 //argument0 y position of current row
 var List = ds_list_create()
 //add all squares in current row to a list

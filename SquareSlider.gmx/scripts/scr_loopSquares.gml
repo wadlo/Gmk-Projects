@@ -1,10 +1,13 @@
 //does screen wrapping
 
-if global.moveX {
+if global.moveX 
+{
     //loop x position moving right
-    if (x + sprite_width/2 > room_width - global.displayStartX) {
+    if (x + sprite_width/2 > room_width - global.displayStartX) 
+    {
         temp = (x + sprite_width/2) - (room_width - global.displayStartX)
-        x = temp + global.displayStartX - (sprite_width/2) }
+        x = temp + global.displayStartX - (sprite_width/2) 
+    }
 
     //loop x position moving left
     if (x + sprite_width/2 < global.displayStartX) {

@@ -26,16 +26,45 @@
           <argument>
             <kind>1</kind>
             <string>//fill the screen with squares
-
 for(i = global.missingRows; i &lt; global.rows; i +=1)
 {
     for(j = global.missingCols; j &lt; global.columns; j +=1)
     {
-        squareX = ((global.squareWidth + (global.squareSpaceX))* j) + global.displayStartX + (global.squareSpaceX/2)
-        squareY = ((global.squareHeight + (global.squareSpaceY))* i) + global.displayStartY + (global.squareSpaceY/2)
+        squareX = ((global.squareWidth + (global.squareSpaceX))* j) + global.displayStartX + (global.squareSpaceX)
+        squareY = ((global.squareHeight + (global.squareSpaceY))* i) + global.displayStartY + (global.squareSpaceY)
         instance_create(squareX, squareY, obj_SquareStd);
     } 
 }
+//alarm[0] = 200;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>for(i = 0; i &lt; global.columns; i +=1)
+{
+    squareX = ((global.squareWidth + (global.squareSpaceX))* i) + global.displayStartX + (global.squareSpaceX/2)
+    squareY = -100//((global.squareHeight + (global.squareSpaceY))* i) + global.displayStartY + (global.squareSpaceY/2)
+    instance_create(squareX, squareY, obj_SquareStd);
+} 
+alarm[0] = 200
 </string>
           </argument>
         </arguments>
@@ -59,27 +88,35 @@ for(i = global.missingRows; i &lt; global.rows; i +=1)
           <argument>
             <kind>1</kind>
             <string>//set and update moving direction
-if (global.mouseIsPressed == true) {
-    if global.moveY = false {
-        if (global.mouseRow!=scr_findRow(mouse_y)) {
-        global.mouseCol = scr_findColumn(mouse_x);
+if (global.mouseIsPressed == true) 
+{
+    if global.moveY = false 
+    {
+        if (global.mouseRow!=scr_findRow(mouse_y)) 
+        {
+            global.mouseCol = scr_findColumn(mouse_x);
             global.moveX = false;
             global.moveY = true; 
-                with (obj_SquareStd)
-                    scr_alignX();
-
-                
-                    
-            } }
-    if global.moveX = false {
+            with (obj_SquareStd)
+            {
+                scr_alignX();
+            }
+        } 
+    }
+    if global.moveX = false 
+    {
         global.mouseRow = scr_findRow(mouse_y);
-        if (global.mouseCol!=scr_findColumn(mouse_x)) {
-             global.moveX = true;
-             global.moveY = false; 
-             with (obj_SquareStd)
-                    scr_alignY();
-
-               } } } 
+        if (global.mouseCol!=scr_findColumn(mouse_x)) 
+        {
+            global.moveX = true;
+            global.moveY = false; 
+            with (obj_SquareStd)
+            {
+                scr_alignY();
+            } 
+        } 
+    }
+} 
 </string>
           </argument>
         </arguments>
@@ -108,8 +145,8 @@ if (global.mouseIsPressed == false) {
     scr_destroyVertically()
 }
 
-show_debug_message("mouse x " + string(scr_findColumn(mouse_x)));
-show_debug_message("mouse y " + string(scr_findRow(mouse_y)));
+//show_debug_message("mouse x " + string(scr_findColumn(mouse_x)));
+//show_debug_message("mouse y " + string(scr_findRow(mouse_y)));
 
 </string>
           </argument>
@@ -156,8 +193,7 @@ show_debug_message("mouse y " + string(scr_findRow(mouse_y)));
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>scr_destroyHorizontally()
-scr_destroyVertically()
+            <string>global.breakpoint = true
 </string>
           </argument>
         </arguments>

@@ -1,3 +1,6 @@
+//temp
+global.breakpoint = false
+
 //initialize number of rows and columns
 global.rows = 10 //10
 global.columns = 6 //6

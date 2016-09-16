@@ -84,17 +84,17 @@ image_yscale = global.squareHeight/sprite_height
           <argument>
             <kind>1</kind>
             <string>//move squares if mouse is clicked.
-if global.mouseIsPressed {
+//if global.mouseIsPressed {
 
     //find row and column
         row = scr_findRow(y);
         column = scr_findColumn(x);
         scr_moveSquare()
-        scr_loopSquares() }
+        scr_loopSquares() //}
         
     //align when released
-    if mouse_check_button_released(mb_left) {
-        scr_alignSquares(); }
+    //if mouse_check_button_released(mb_left) {
+        scr_alignSquares(); //}
     
 //Make them fall together.
 depth = y;
@@ -158,7 +158,7 @@ alignSquares = true
 //sets the mouse row and column to move
 if global.mouseRow = 0
     global.mouseRow = scr_findRow(mouse_y);
-    show_debug_message(scr_findRow(mouse_y));
+    //show_debug_message(scr_findRow(mouse_y));
 if global.mouseCol = 0
     global.mouseCol = scr_findColumn(mouse_x);
 
@@ -192,8 +192,10 @@ if (global.initMouseY == -1) {
           <argument>
             <kind>1</kind>
             <string>//time to fall.
-if !(global.mouseIsPressed) {
-    scr_dropSquares() }
+//if !(global.mouseIsPressed) 
+//{
+    scr_dropSquares() 
+//}
 
 //time to draw.    
 draw_sprite_ext(spr_squareStd, 0, x, y, image_xscale, image_yscale, 0, color, 255)

@@ -86,14 +86,14 @@ if alpha &lt; 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>with(obj_particleSystem)
+            <string>/*with(obj_particleSystem)
 {
     if part_type_exists(particleSystem)
     {
         part_type_destroy(particleSystem)
     }
-}
-room_goto(playRoom)
+}*/
+room_goto(LevelSelect)
 </string>
           </argument>
         </arguments>
