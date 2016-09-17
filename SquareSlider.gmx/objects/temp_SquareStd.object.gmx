@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_SquareStd</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,13 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//moving variables
+            <string>//This object is made for debugging purposes.
+drawX = x;
+drawY = y;
+
+//moving variables
 ySpeed = 0;
 alignSquares = false
-initialX = 0;
-initialY = 0;
+initialX = 0
+initialY = 0
 
-//Color and smooth-moving
+//Make a random color
 color = make_colour_rgb(0, 0, 255);//innitialize base color
 rand_num = irandom(global.numColors) 
 switch (rand_num) { //Select color based of random result
@@ -53,8 +57,6 @@ switch (rand_num) { //Select color based of random result
     case 5:
         color = global.purple
         break;  }
-    drawX = x;
-    drawY = y;
 
 //default row and column
 row = 0
@@ -89,14 +91,14 @@ image_yscale = global.squareHeight/sprite_height
 //if global.mouseIsPressed {
 
     //find row and column
-        row = scr_findFallRow(y);
+        row = scr_findRow(y);
         column = scr_findColumn(x);
         scr_moveSquare()
         scr_loopSquares() //}
         
     //align when released
     //if mouse_check_button_released(mb_left) {
-        //scr_alignSquares(); //}
+        scr_alignSquares(); //}
     
 //Make them fall together.
 depth = y;
@@ -138,6 +140,44 @@ alignSquares = true
         </arguments>
       </action>
     </event>
+    <event eventtype="6" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>global.mouseIsPressed = true;
+
+//sets the mouse row and column to move
+if global.mouseRow = 0
+    global.mouseRow = scr_findRow(mouse_y);
+    //show_debug_message(scr_findRow(mouse_y));
+if global.mouseCol = 0
+    global.mouseCol = scr_findColumn(mouse_x);
+
+//sets initial mouse position to the current mouse position
+if (global.initMouseX == -1) {
+    global.initMouseX = mouse_x; }
+if (global.initMouseY == -1) {
+    global.initMouseY = mouse_y }
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -161,9 +201,10 @@ alignSquares = true
     scr_dropSquares() 
 //}
 
+drawX = (drawX + x*2) / 3;
+drawY = (drawY + y*2) / 3;
+
 //time to draw.    
-drawX = (2 * x + drawX) / 3;
-drawY = (2 * y + drawY) / 3;
 draw_sprite_ext(spr_squareStd, 0, drawX, drawY, image_xscale, image_yscale, 0, color, 255)
 </string>
           </argument>

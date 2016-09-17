@@ -20,6 +20,7 @@ global.displayStartY = 30 //25
 global.squareSpaceX = 2 //2
 global.squareSpaceY = 2 //2
 
+
 //Number of colors
 global.numColors = 5
 

@@ -1,7 +1,7 @@
 //Align X
 row = scr_findRow(y)
 mouseRow = scr_findRow(mouse_y)
-if row != mouseRow or global.mouseIsPressed = false
+//if row != mouseRow or global.mouseIsPressed = false
 {
     for (i = 0; i < global.columns; i++) 
     {
@@ -11,7 +11,7 @@ if row != mouseRow or global.mouseIsPressed = false
         } 
     }
 }
-else 
+/*else 
 {
     //if global.breakpoint
     //{

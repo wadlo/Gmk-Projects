@@ -50,6 +50,7 @@
     <script>scripts\scr_destroyVertically.gml</script>
     <script>scripts\scr_dropSquares.gml</script>
     <script>scripts\scr_findRow.gml</script>
+    <script>scripts\scr_findFallRow.gml</script>
     <script>scripts\scr_findColumn.gml</script>
     <script>scripts\scr_findY.gml</script>
     <script>scripts\scr_findX.gml</script>
@@ -87,6 +88,7 @@
         <object>objects\obj_LevelOne</object>
       </objects>
     </objects>
+    <object>objects\object23</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Logo</room>
